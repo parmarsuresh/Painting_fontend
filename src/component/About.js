@@ -44,6 +44,7 @@ const About = () => {
                     customizations online. We have served over 15000 customers from all over the
                     world. For us art is more than just a business - it's our passion, our grit,
                     our life !
+                    This Project is a very usefull.
                </p>
                <center>
                     {" "}
