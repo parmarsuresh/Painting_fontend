@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Solway:wght@500&display=swap');
+
+/*font-family: 'Solway', serif;*/
+* {
+     margin: 0%;
+     padding: 0%;
+     box-sizing: border-box;
+     font-family: 'Montserrat',
+          sans-serif;
+}
+
+
+
+.slide-content1 {
+     padding: 45px 20px;
+     margin: 0 40px;
+     overflow: hidden;
+     border-radius: 50%;
+}
+
+.Card {
+     border: 0.5px solid grey;
+     border-radius: 26px;
+
+}
+
+.image-content,
+.card-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 10px 14px;
+     width: 250px;
+     border: non;
+}
+
+.image-content {
+     position: relative;
+     row-gap: 5px;
+     border-radius: 25%;
+}
+
+.overlay {
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 100%;
+     background-color: #4070f4;
+     border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+     content: "";
+     position: absolute;
+     right: 0;
+     bottom: -40px;
+     height: 40px;
+     width: 40px;
+     background-color: #4070fff4;
+     outline: none;
+     border: none;
+}
+
+
+.overlay::after {
+     border-radius: 0 25px 0 0;
+     background-color: #fff;
+     outline: none;
+     border: none;
+}
+
+.card-image {
+     position: relative;
+     height: 150px;
+     width: 150px;
+     border-radius: 50%;
+     background: #FFF;
+     padding: 3px;
+
+}
+
+.card-image .card-img {
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 4px solid #4070f4;
+}
+
+.name {
+     font-size: 18px;
+     font-weight: 500;
+     color: #333;
+}
+
+.description {
+     font-size: 14px;
+     color: #707070;
+     text-align: center;
+}
+
+.button {
+     border: none;
+     font-size: 16px;
+     color: #fff;
+     padding: 8px 16px;
+     background-color: #4070f4;
+     border-radius: 6px;
+     margin: 14px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+}
+
+
+.art5 {
+     position: relative;
+     width: 100%;
+     height: 10%;
+     font-size: 40px;
+     padding-top: 40px;
+     font-weight: bold;
+     color: red;
+     text-decoration: none;
+     text-shadow: 5px 6px 33px silver;
+     font-family: cursive;
+     text-align: center;
+     margin-bottom: 50px;
+}

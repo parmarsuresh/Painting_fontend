@@ -1,13 +1,618 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.Mainroot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.iconH {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+}
+
+.icon {
+  position: relative;
+  width: 100px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.icon>img {
+  width: 60%;
+  height: 60%;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.itemC {
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  top: 10px;
+  text-align: center;
+}
+
+.itemD {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0%;
+}
+
+.itemD>span {
+  margin-left: 10px;
+  display: block;
+  position: relative;
+}
+
+
+@media screen and (max-width:990px) {
+  .itemD {
+    position: relative;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 0%;
+  }
+
+  .itemD>span {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    justify-content: center;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 0%;
+    margin-left: 0px;
+
+  }
+
+  #listD {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:450px) {}
+
+.listicon>a {
+  padding-left: 20px;
+}
+
+.tom {
+  background-color: rgba(96, 72, 72, 0.71) !important;
+}
+
+.right_nav {
+  margin-left: auto !important;
+}
+
+.color {
+  color: white !important;
+}
+
+.img {
+  height: 500px !important;
+}
+
+.contaxt1 {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  min-height: 1000px;
+  margin-bottom: auto;
+}
+
+
+.footer {
+  position: absolute;
+  width: 100%;
+  display: block;
+  background-color: rgba(19, 13, 13, 0.758);
+  min-height: 200px;
+  color: white;
+  line-height: 50px;
+  font-size: 5px;
+  font-family: monospace;
+  font-style: italic;
+}
+
+.fix {
+  color: black;
+  display: block;
+  text-align: center;
+}
+
+.form1 {
+  display: block;
+  position: absolute;
+  width: 500px;
+  min-height: 500px;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -20%);
+
+}
+
+/* upload image */
+.tomup {
+  position: relative;
+  width: 100%;
+  min-height: 1500px;
+  margin-top: 100px;
+  background: linear-gradient(to bottom right, rgb(185, 223, 18), rgb(165, 151, 153), rgba(61, 204, 80, 0.767), grey);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  margin: 0px;
+}
+
+.tomup1 {
+  position: relative;
+  width: 100%;
+  min-height: 1500px;
+  margin-top: 100px;
+  background: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  margin: 0px;
+}
+
+.uploadc {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  margin-top: 100px;
+  margin-left: 25%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+table {
+  position: absolute;
+  margin-top: 0px;
+  width: 100%;
+  height: 500px;
+}
+
+.as {
+  font-family: inherit;
+  color: white;
+  font-size: 20px;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+.m1 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-right: 5px;
+  justify-content: space-between;
+}
+
+.m2 {
+  width: 60px;
+  height: 50px;
+  text-align: center;
+}
+
+.m2 i {
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+.m2 i:hover {
+  text-shadow: 5px 5px 30px rgb(240, 236, 21);
+  color: slateblue;
+}
+
+.as1 {
+  width: 90%;
+  padding: 6px;
+}
+
+/*image list css*/
+.disimg {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+/* painter profile css */
+
+.tomp {
+  position: relative;
+  width: 100%;
+  min-height: 1600px;
+  margin-top: 0px;
+  background: radial-gradient(farthest-side at 90% 10%, rgb(185, 223, 18), rgb(165, 151, 153), blue);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profiledetail {
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  margin-top: 100px;
+  margin-left: 25%;
+  border-radius: 20px;
+  background-color: rgba(15, 12, 12, 0.644);
+}
+
+.profile {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+
+}
+
+.profile img {
+  position: relative;
+  left: 50%;
+  top: 0px;
+  padding: 4px;
+  transform: translate(-50%, -0px);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid rgb(240, 235, 227);
+
+}
+
+.p {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  margin-top: 160px;
+}
+
+.p label {
+  display: block;
+  padding: 4px;
+  color: rgb(231, 231, 241);
+  font-size: 22px;
+  text-align: center;
+
+}
+
+.p label:hover {
+  color: rgb(21, 9, 59);
+}
+
+.gg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin-top: 220px;
+}
+
+.gg input {
+
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  background: none;
+  border: 0px;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  outline: none;
+  border-bottom: 1px solid rgb(229, 233, 243);
+  color: rgb(225, 234, 235);
+}
+
+.gg textarea {
+  width: 50%;
+  padding: 10px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  background: none;
+  border: 0px;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  outline: none;
+  border-bottom: 1px solid rgb(229, 233, 243);
+  color: rgb(234, 242, 243);
+}
+
+@media screen and (max-width:750px) {
+  .profiledetail {
+    margin-top: 150px;
+  }
+
+}
+
+
+
+.m1a {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  justify-content: space-between;
+}
+
+.m2a {
+  width: 60px;
+  height: 50px;
+  text-align: center;
+}
+
+.m2a i {
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+.m2a i:hover {
+  text-shadow: 5px 5px 30px rgb(240, 236, 21);
+  color: slateblue;
+}
+
+
+.layout {
+  width: 100%;
+  padding-top: 20px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.up {
+  border: 0px;
+  outline: none;
+  background-color: transparent;
+  box-shadow: 3px 5px 30px rgb(53, 5, 112);
+  text-Decoration: "none";
+  color: black;
+  font-weight: bold;
+  font-family: cursive;
+  font-style: italic;
+  padding: 5px 10px;
+  border-Radius: 10px;
+
+}
+
+.up:hover {
+  background-color: rgba(255, 0, 0, 0.782);
+  color: white;
+  font-family: cursive;
+  font-style: italic;
+  padding: 5px 10px;
+}
+
+.con {
+  position: relative;
+  width: 100%;
+  margin-top: 250px;
+  display: flex;
+  flex-direction: row;
+  min-height: 200px;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: space-evenly;
+}
+
+/* artist list */
+
+.art1 {
+  width: 100%;
+  height: 100px;
+  font-size: 40px;
+  padding-top: 20px;
+  font-weight: bold;
+  color: red;
+  text-decoration: none;
+  text-shadow: 5px 6px 33px silver;
+  font-family: cursive;
+  text-align: center;
+
+}
+
+.pro {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  background-color: red;
+}
+
+.im {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 45%;
+  top: 10px;
+  margin-top: 100px;
+
+}
+
+.im img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.tab {
+  width: 100%;
+  border-spacing: 0px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  height: 100px;
+  color: rgb(129, 75, 75);
+  text-transform: capitalize;
+  font-size: 15px;
+  padding-left: 42%;
+}
+
+.info {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+
+.imgs1 {
+  position: relative;
+  width: 250px;
+  min-height: 300px;
+  margin: 20px;
+  padding: 2px;
+  border: 1px solid rgb(204, 216, 213);
+
+}
+
+.image1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+}
+
+.image1 img {
+  padding: absolute;
+  width: 70%;
+  height: 70%;
+  opacity: 0.5;
+}
+
+.image1 img:hover {
+  opacity: 0.9;
+}
+
+.detail1 {
+  position: absolute;
+  width: 100%;
+  margin-top: 0%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.like1 {
+  padding-left: 80%;
+  height: 12%;
+}
+
+.like1 label {
+  position: relative;
+
+}
+
+.like1 label i {
+  position: absolute;
+}
+
+.like1 i:hover {
+  transform: skewX(1.2);
+  transform: scaleY(1.2);
+}
+
+@media screen and (max-width:750px) {
+  .art1 {
+    width: 100%;
+    height: 100px;
+    margin-top: 150px;
+
+  }
+}
+
+.art22 {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  margin-top: 350px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+/* clogin css*/
+.form1 {
+  border: 5px solid rgb(241, 241, 241);
+  width: 50%;
+  border-radius: 16px;
+  background-color: rgba(170, 199, 225, 0.104);
+  padding: 40px;
+
+}
+
+.form1>h1 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: rgba(87, 87, 136, 0.837);
+  margin-bottom: 40px;
+}
+
+.form-group>label {
+  font-weight: bold;
+  font-family: monospace;
+  padding: 5px 0px;
+}
+
+.form1>form>button {
+  background-color: rgba(34, 109, 201, 0.595);
+  margin-left: 20%;
+  width: 60%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.footer h5 {
+  font-size: 19px;
+  line-height: 20px;
+}
+
+
+@media screen and (max-width:550px) {
+  .form1 {
+    width: 100%;
+  }
+
+  .footer h5 {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0px;
+  }
 }
