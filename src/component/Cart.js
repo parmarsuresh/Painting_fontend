@@ -58,7 +58,7 @@ const Cart = (props) => {
 
                     </tr>
                     {
-                         !data ? <h2>df</h2> :
+                         !data ? null :
                               data.map((v, index) => {
                                    return (<>
                                         <tr>

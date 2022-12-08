@@ -51,12 +51,21 @@
   padding: 0%;
 }
 
-.itemD>span {
-  margin-left: 10px;
-  display: block;
-  position: relative;
+.itemD>a {
+  font-size: 22px;
 }
 
+#searchT {
+  margin-top: 0px;
+}
+
+.navlinka>a {
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  width: 100%;
+  color: black;
+}
 
 @media screen and (max-width:990px) {
   .itemD {
@@ -78,15 +87,29 @@
     box-sizing: border-box;
     padding: 0%;
     margin-left: 0px;
-
   }
 
-  #listD {
-    width: 90%;
+  #searchT {
+    margin-top: 20px;
+  }
+
+  .navlinka>a {
+    font-size: 14px;
   }
 }
 
-@media screen and (max-width:450px) {}
+
+@media screen and (max-width:450px) {
+  .searchT {
+    margin-top: 10px;
+  }
+
+  .navlinka>a {
+    font-size: 12px;
+  }
+}
+
+
 
 .listicon>a {
   padding-left: 20px;
@@ -103,6 +126,7 @@
 .color {
   color: white !important;
 }
+
 
 .img {
   height: 500px !important;

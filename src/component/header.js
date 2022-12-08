@@ -73,34 +73,35 @@ const Header = (props) => {
                                         <span>All Painter</span>
                                    </div>
                               </NavLink>
-
-
-                              <div className='itemD'>
+                         </Nav>
+                         <Nav>
+                              <div className='itemD' id="searchT">
                                    <span style={{ "width": "100%" }}>
-                                        <NavDropdown title="search" id="collasible-nav-dropdown listD">
-                                             <NavDropdown.Item>
-                                                  <NavLink to="/find/1" style={{ textDecoration: 'none' }} className="fix">Figurative, People, Human, Paintings</NavLink>
+                                        <NavDropdown title="search" id="collasible-nav-dropdown">
+                                             <NavDropdown.Item className='navlinka'>
+                                                  <NavLink to="/find/1" >Figurative, People, Human, Paintings</NavLink>
                                              </NavDropdown.Item>
-                                             <NavDropdown.Item >
-                                                  <NavLink to="/find/2" style={{ textDecoration: 'none' }} className="fix">Landscape, Seascape & Cityscape Paintings</NavLink>
+                                             <NavDropdown.Item className='navlinka'>
+                                                  <NavLink to="/find/2" >Landscape, Seascape & Cityscape Paintings</NavLink>
                                              </NavDropdown.Item>
-                                             <NavDropdown.Item >
-                                                  <NavLink to="/find/3" style={{ textDecoration: 'none' }} className="fix">Indian Paintings</NavLink>
+                                             <NavDropdown.Item className='navlinka'>
+                                                  <NavLink to="/find/3" >Indian Paintings</NavLink>
                                              </NavDropdown.Item>
-                                             <NavDropdown.Item >
-                                                  <NavLink to="/find/4" style={{ textDecoration: 'none' }} className="fix">Animals, Birds, Fishes Paintings</NavLink>
+                                             <NavDropdown.Item className='navlinka'>
+                                                  <NavLink to="/find/4" >Animals, Birds, Fishes Paintings</NavLink>
                                              </NavDropdown.Item>
-                                             <NavDropdown.Item >
-                                                  <NavLink to="/find/5" style={{ textDecoration: 'none' }} className="fix">Religious, God, Goddess Paintings</NavLink>
+                                             <NavDropdown.Item className='navlinka'>
+                                                  <NavLink to="/find/5" >Religious, God, Goddess Paintings</NavLink>
                                              </NavDropdown.Item>
-                                             <NavDropdown.Item >
-                                                  <NavLink to="/find/6" style={{ textDecoration: 'none' }} className="fix">Abstract Paintings</NavLink>
+                                             <NavDropdown.Item className='navlinka'>
+                                                  <NavLink to="/find/6">Abstract Paintings</NavLink>
                                              </NavDropdown.Item>
                                         </NavDropdown></span>
-                              </div>
-                         </Nav>
 
-                         <Nav>
+                              </div>
+
+
+
                               <div className='itemD' style={{ "marginTop": "0%" }}>
 
                                    <span style={{ "width": "100%" }}>
@@ -113,6 +114,7 @@ const Header = (props) => {
                                              </NavDropdown.Item>
                                         </NavDropdown>
                                    </span>
+
                               </div>
 
                               <div className='itemD' style={{ "marginTop": "0%" }}>

@@ -162,7 +162,7 @@ const Home = (props) => {
                          <p id="d">Lorem ipsum dolor, sit amet consectetur adipisicing rem maiores consequuntur fugit!</p>
                          <div className="price" id="setPrice"></div>
                          <div className="buttons">
-                              <a href="#" className="buy" onClick={async () => {
+                              <a href="#" className="buy" id="buy" onClick={async () => {
                                    const url = `http://192.168.43.169:3000/Addcart/${id}`;
                                    const r = await axios.get(url);
                                    try {

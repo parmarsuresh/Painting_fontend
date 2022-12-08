@@ -562,7 +562,7 @@ const Find = () => {
                                                   </NavLink>
                                                   <div className="k1bs">
                                                        <label>
-                                                            <a href="/Addcart" style={{ "fontSize": "15px" }}>buyNow</a>
+                                                            <NavLink to="/cart" style={{ "fontSize": "15px" }}>buyNow</NavLink>
                                                        </label>
                                                   </div>
                                              </div>
