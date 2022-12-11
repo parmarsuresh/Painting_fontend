@@ -46,7 +46,7 @@ const Home = (props) => {
           document.querySelector('.products-preview').style.display = "none";
      }
      const findimg = async () => {
-          const url = "http://192.168.43.169:3000/findimgdata";
+          const url = "http://127.0.0.1:3000/findimgdata";
           const r = await axios.get(url);
           try {
                const data = await r;
@@ -163,7 +163,7 @@ const Home = (props) => {
                          <div className="price" id="setPrice"></div>
                          <div className="buttons">
                               <a href="#" className="buy" id="buy" onClick={async () => {
-                                   const url = `http://192.168.43.169:3000/Addcart/${id}`;
+                                   const url = `http://127.0.0.1:3000/Addcart/${id}`;
                                    const r = await axios.get(url);
                                    try {
                                         const pd = await r;
@@ -182,7 +182,7 @@ const Home = (props) => {
                               }}>buy now</a>
 
                               <NavLink to="#" className="cart" onClick={async () => {
-                                   const url = `http://192.168.43.169:3000/Addcart/${id}`;
+                                   const url = `http://127.0.0.1:3000/Addcart/${id}`;
                                    const r = await axios.get(url);
                                    try {
                                         const pd = await r;

@@ -21,7 +21,7 @@ const Uploadp = () => {
      })
 
      const get = async () => {
-          const res = await axios.get("http://192.168.43.169:3000/addP");
+          const res = await axios.get("http://127.0.0.1:3000/addP");
           try {
                var data = await res;
                console.log(data.data);
@@ -47,7 +47,7 @@ const Uploadp = () => {
           }
 
           else {
-               let url = "http://192.168.43.169:3000/addP";
+               let url = "http://127.0.0.1:3000/addP";
                const formdata = new FormData();
                formdata.append('myfile', data.Profile, data.Profile.name);
                formdata.append('Imgtype', data.Imgtype);

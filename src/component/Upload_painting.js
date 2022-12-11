@@ -12,7 +12,7 @@ const UDPan = () => {
      const [data, dataf] = useState();
 
      const getData = async () => {
-          const url = `http://192.168.43.169:3000/getimg/${id}`;
+          const url = `http://127.0.0.1:3000/getimg/${id}`;
           const r = await axios.get(url);
           try {
                const imd = await r;
@@ -30,7 +30,7 @@ const UDPan = () => {
      }
 
      const get = async () => {
-          const res = await axios.get("http://192.168.43.169:3000/addP");
+          const res = await axios.get("http://127.0.0.1:3000/addP");
           try {
                var data = await res;
                console.log(data.data);
@@ -54,7 +54,7 @@ const UDPan = () => {
      const getdata = async () => {
           if (data.Profile === pd) {
 
-               let url = "http://192.168.43.169:3000/upaintingD";
+               let url = "http://127.0.0.1:3000/upaintingD";
                const res = await axios.post(url, data);
 
                try {
@@ -77,7 +77,7 @@ const UDPan = () => {
           }
           else {
 
-               let url = "http://192.168.43.169:3000/upaintingDP";
+               let url = "http://127.0.0.1:3000/upaintingDP";
                const formdata = new FormData();
                formdata.append('myfile', data.Profile, data.Profile.name);
                formdata.append('Imgtype', data.Imgtype);

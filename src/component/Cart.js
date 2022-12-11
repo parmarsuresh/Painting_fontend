@@ -11,7 +11,7 @@ const Cart = (props) => {
      let navigate = useNavigate();
      var d1 = 0;
      const findcart = async () => {
-          const url = "http://192.168.43.169:3000/findcart";
+          const url = "http://127.0.0.1:3000/findcart";
           const r = await axios.get(url);
           try {
                const d = await r;
@@ -81,7 +81,7 @@ const Cart = (props) => {
 
                                              </td>
                                              <td><button> <i className="fa-solid fa-less-than-equal" onClick={async () => {
-                                                  const url = `http://192.168.43.169:3000/qtyl/${v._id}`;
+                                                  const url = `http://127.0.0.1:3000/qtyl/${v._id}`;
                                                   const r = await axios.get(url);
                                                   try {
                                                        const pd = await r;
@@ -95,7 +95,7 @@ const Cart = (props) => {
                                                   async () => {
 
 
-                                                       const url = `http://192.168.43.169:3000/qtyg/${v._id}`;
+                                                       const url = `http://127.0.0.1:3000/qtyg/${v._id}`;
                                                        const r = await axios.get(url);
                                                        try {
                                                             const pd = await r;
@@ -113,7 +113,7 @@ const Cart = (props) => {
                                              <td style={{ "marginRight": "10px" }}><i className='fas fa-trash-alt'
                                                   style={{ "color": "rgb(21, 21, 34)", "cursor": "pointer", "fontSize": "20px" }} onClick={
                                                        async () => {
-                                                            const url = `http://192.168.43.169:3000/cartdelete/${v._id}`;
+                                                            const url = `http://127.0.0.1:3000/cartdelete/${v._id}`;
                                                             const r = await axios.get(url);
                                                             try {
                                                                  const pd = await r;

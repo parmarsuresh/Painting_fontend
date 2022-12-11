@@ -24,7 +24,7 @@ import { Pagination, Navigation } from "swiper";
 const Artists = () => {
      const [data, dataf] = useState([]);
      const getPaint = async () => {
-          let url = "http://192.168.43.169:3000/allpainter";
+          let url = "http://127.0.0.1:3000/allpainter";
           const res = await axios.get(url);
           try {
                const d = await res.data;

@@ -10,7 +10,7 @@ const Caccount = (props) => {
      let navigate = useNavigate();
      const [path, setpath] = useState();
      const g = async () => {
-          const url = "http://192.168.43.169:3000/caccount";
+          const url = "http://127.0.0.1:3000/caccount";
           const r = await axios.get(url);
           try {
                const res = await r;
@@ -31,7 +31,7 @@ const Caccount = (props) => {
 
      const logout = async () => {
           console.log("logout");
-          const url = 'http://192.168.43.169:3000/clogout';
+          const url = 'http://127.0.0.1:3000/clogout';
           const r = await axios.get(url)
           try {
                const res = await r;

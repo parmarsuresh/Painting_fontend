@@ -28,7 +28,7 @@ const Plogin = () => {
      }
      const getdata = async () => {
 
-          const response = await axios.post("http://192.168.43.169:3000/plogin", v, {
+          const response = await axios.post("http://127.0.0.1:3000/plogin", v, {
                headers: { "Content-Type": "application/json" },
           });
           try {

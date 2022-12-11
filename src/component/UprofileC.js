@@ -34,7 +34,7 @@ const UprofileC = () => {
      const updata = async (e) => {
           e.preventDefault();
           if (pd === data.Profile) {
-               let url = "http://192.168.43.169:3000/uprofileDC";
+               let url = "http://127.0.0.1:3000/uprofileDC";
                const res = await axios.post(url, data);
 
                try {
@@ -55,7 +55,7 @@ const UprofileC = () => {
 
           }
           else {
-               let url = "http://192.168.43.169:3000/uprofileDPC";
+               let url = "http://127.0.0.1:3000/uprofileDPC";
                const formdata = new FormData();
                formdata.append('myfile', data.Profile, data.Profile.name);
                formdata.append('FirstName', data.FirstName);
@@ -104,7 +104,7 @@ const UprofileC = () => {
      }
 
      const getD = async () => {
-          const url = "http://192.168.43.169:3000/caccount";
+          const url = "http://127.0.0.1:3000/caccount";
           const r = await axios.get(url);
           try {
                const res = await r;

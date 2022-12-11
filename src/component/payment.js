@@ -27,7 +27,7 @@ const Payment = () => {
      }
 
      const g = async () => {
-          const url = "http://192.168.43.169:3000/caccount";
+          const url = "http://127.0.0.1:3000/caccount";
           const r = await axios.get(url);
           try {
                const res = await r;
@@ -98,7 +98,7 @@ const Payment = () => {
      // }
 
      // const getdata = async () => {
-     //      let url = "http://192.168.43.169:3000/paynow";
+     //      let url = "http://127.0.0.1:3000/paynow";
      //      console.log(data);
      //      const response = await axios.post(url, data);
      //      try {

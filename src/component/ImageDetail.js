@@ -12,7 +12,7 @@ const ImageDetail = (props) => {
 
      useEffect(() => {
           const getdata = async () => {
-               const url = `http://192.168.43.169:3000/getimg/${id}`;
+               const url = `http://127.0.0.1:3000/getimg/${id}`;
                const r = await axios.get(url);
                try {
                     const pd = await r;
@@ -85,7 +85,7 @@ const ImageDetail = (props) => {
                                    {imd.Rprice}
                               </s></span>
                               <span className="buy" style={{ "color": "wheat", "textDecoration": "none" }} onClick={async () => {
-                                   const url = `http://192.168.43.169:3000/Addcart/${imd._id}`;
+                                   const url = `http://127.0.0.1:3000/Addcart/${imd._id}`;
                                    const r = await axios.get(url);
                                    try {
                                         const pd = await r;
@@ -114,7 +114,7 @@ const ImageDetail = (props) => {
                          <div className="addc1">
 
                               <NavLink to="#" style={{ "color": "wheat", "textDecoration": "none" }} onClick={async () => {
-                                   const url = `http://192.168.43.169:3000/Addcart/${id}`;
+                                   const url = `http://127.0.0.1:3000/Addcart/${id}`;
                                    const r = await axios.get(url);
                                    try {
                                         const pd = await r;

@@ -28,7 +28,7 @@ const Pfpass = () => {
      }
      const getdata = async () => {
           if (v.Password === v.CPassword) {
-               const response = await axios.post("http://192.168.43.169:3000/Pfpass", v, {
+               const response = await axios.post("http://127.0.0.1:3000/Pfpass", v, {
                     headers: { "Content-Type": "application/json" },
                });
                try {

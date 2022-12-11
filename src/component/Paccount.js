@@ -14,7 +14,7 @@ const Paccount = () => {
 
      const listimg = async () => {
           console.log("listimg called");
-          const url = "http://192.168.43.169:3000/imglist";
+          const url = "http://127.0.0.1:3000/imglist";
           const r = await axios.get(url);
           try {
                const d = await r;
@@ -34,7 +34,7 @@ const Paccount = () => {
 
      const logout = async () => {
           console.log("deleted");
-          const url = 'http://192.168.43.169:3000/plogout';;
+          const url = 'http://127.0.0.1:3000/plogout';;
           const r = await axios.get(url)
           try {
                const res = await r;
@@ -51,7 +51,7 @@ const Paccount = () => {
      const deletf = async (id) => {
 
           console.log(id);
-          const url = `http://192.168.43.169:3000/delimg/${id}`;
+          const url = `http://127.0.0.1:3000/delimg/${id}`;
           const r = await axios.get(url);
           try {
                const data = await r;
@@ -71,7 +71,7 @@ const Paccount = () => {
      useEffect(() => {
 
           const g = async () => {
-               const url = "http://192.168.43.169:3000/paccount";
+               const url = "http://127.0.0.1:3000/paccount";
                const r = await axios.get(url);
                try {
                     const res = await r;

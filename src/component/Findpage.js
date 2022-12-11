@@ -140,7 +140,7 @@ const Find = () => {
 
      }
      const find = async () => {
-          const url = `http://192.168.43.169:3000/findimg/${id}`;
+          const url = `http://127.0.0.1:3000/findimg/${id}`;
           const res = await axios.get(url);
           try {
                const Limg = await res.data;

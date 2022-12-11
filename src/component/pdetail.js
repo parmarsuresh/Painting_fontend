@@ -51,7 +51,7 @@ const Pdetail = (props) => {
 
 
      const getPD = async () => {
-          const url = `http://192.168.43.169:3000/p_detail/${id}`;
+          const url = `http://127.0.0.1:3000/p_detail/${id}`;
           const r = await axios.get(url);
           try {
                const pd = await r;
@@ -71,7 +71,7 @@ const Pdetail = (props) => {
 
 
      const getPimg = async () => {
-          const url = `http://192.168.43.169:3000/p_imgdetail/${id}`;
+          const url = `http://127.0.0.1:3000/p_imgdetail/${id}`;
           const r = await axios.get(url);
           try {
                const pd = await r;
@@ -154,7 +154,7 @@ const Pdetail = (props) => {
                          <div className="price" id="setPrice"></div>
                          <div className="buttons">
                               <a href="#" className="buy" onClick={async () => {
-                                   const url = `http://192.168.43.169:3000/Addcart/${Id}`;
+                                   const url = `http://127.0.0.1:3000/Addcart/${Id}`;
                                    const r = await axios.get(url);
                                    try {
                                         const pd = await r;
@@ -173,7 +173,7 @@ const Pdetail = (props) => {
                               }}>buy now</a>
 
                               <NavLink to="#" className="cart" onClick={async () => {
-                                   const url = `http://192.168.43.169:3000/Addcart/${Id}`;
+                                   const url = `http://127.0.0.1:3000/Addcart/${Id}`;
                                    const r = await axios.get(url);
                                    try {
                                         const pd = await r;

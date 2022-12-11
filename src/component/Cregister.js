@@ -27,7 +27,7 @@ const Cregister = () => {
                errf1("please add your profile pic")
           }
           else {
-               let url = "http://192.168.43.169:3000/cretister";
+               let url = "http://127.0.0.1:3000/cretister";
                const formdata1 = new FormData();
                formdata1.append('myfile', data1.profilePic, data1.profilePic.name);
                formdata1.append('FirstName', data1.FirstName);
