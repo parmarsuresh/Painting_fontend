@@ -63,9 +63,8 @@ const Caccount = (props) => {
           <div className="Home">
                <div className="layout">
                     <button onClick={logout} className="up">Logout </button>
-                    <br />
-
                     <NavLink to="/UprofileC" style={{ textDecoration: 'none' }} className="up">Update Profile</NavLink>
+                    <NavLink to="/show_order" style={{ textDecoration: 'none' }} className="up">show order</NavLink>
                </div>
                {
                     !path ? <p></p> : <Showd data={path} />

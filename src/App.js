@@ -33,6 +33,9 @@ import Cfpass from "./component/Cfpass";
 import Pfpass from "./component/Pfpass";
 import "./index.css";
 import Payment from "./component/payment";
+import Show from "./component/Showorder";
+import Acceptorder from "./component/ShowAO";
+import ShowC from "./component/show_orderC";
 import { useState } from "react";
 
 
@@ -70,6 +73,9 @@ function App() {
               <Route path="/cregister" element={<Cregister />}></Route>
               <Route path="/caccount" element={<Caccount cartf={login} />}></Route>
               <Route path="/Addp" element={<UploadP />}></Route>
+              <Route path="/show" element={<Show />}></Route>
+              <Route path="/show_order" element={<ShowC />}></Route>
+              <Route path="/showAO" element={<Acceptorder />}></Route>
               <Route path="/Uprofile" element={<Uprofile />}></Route>
               <Route path="/update_p/:id" element={<UDPan />}></Route>
               <Route path="/UprofileC" element={<UprofileC />}></Route>

@@ -12,6 +12,8 @@ const Payment = () => {
           email: "",
           phone: "",
      })
+     const [cid, cidf] = useState();
+     const [PID, PIDF] = useState();
      const insert = (e) => {
           const { name, value } = e.target;
           dataf((p) => {
@@ -36,7 +38,8 @@ const Payment = () => {
                     navigate("/Clogin", { replace: true });
                }
                else {
-                    console.log(res.data);
+                    console.log("jay=>");
+                    cidf(res.data[0]._id);
                     dataf((p) => {
                          return (
                               {
@@ -55,73 +58,29 @@ const Payment = () => {
           }
      }
 
-     //code of form 
+     const pid = async () => {
+          var arr = [];
+          const url = "http://127.0.0.1:3000/findcart";
+          const r = await axios.get(url);
+          try {
+               const d = await r;
 
-     // function isDate(val) {
-     //      // Cross realm comptatible
-     //      return Object.prototype.toString.call(val) === '[object Date]'
-     // }
-
-     // function isObj(val) {
-     //      return typeof val === 'object'
-     // }
-
-     // function stringifyValue(val) {
-     //      if (isObj(val) && !isDate(val)) {
-     //           return JSON.stringify(val)
-     //      } else {
-     //           return val
-     //      }
-     // }
-
-     // function buildForm({ action, params }) {
-     //      const form = document.createElement('form')
-     //      form.setAttribute('method', 'post')
-     //      form.setAttribute('action', action)
-
-     //      Object.keys(params).forEach(key => {
-     //           const input = document.createElement('input')
-     //           input.setAttribute('type', 'hidden')
-     //           input.setAttribute('name', key)
-     //           input.setAttribute('value', stringifyValue(params[key]))
-     //           form.appendChild(input)
-     //      })
-
-     //      return form
-     // }
-
-     // function post(details) {
-     //      const form = buildForm(details)
-     //      document.body.appendChild(form)
-     //      form.submit()
-     //      form.remove()
-     // }
-
-     // const getdata = async () => {
-     //      let url = "http://127.0.0.1:3000/paynow";
-     //      console.log(data);
-     //      const response = await axios.post(url, data);
-     //      try {
-     //           const d1 = await response;
-     //           console.log(d1.data);
-     //           if (d1.status === 205 || !d1) {
-     //                console.log(d1.data);
-     //           }
-     //           else {
-     //                // var information = {
-     //                //      action: "",
-     //                //      params: d1.data
-     //                // }
-     //                console.log("data ==>" + d1.data);
-     //           }
-     //      }
-     //      catch (e) {
-     //           window.alert("Invalid credention");
-     //           console.log("Invalid credention", e);
-     //      }
-
-     // }
-
+               if (d.status === 200) {
+                    if (d.data.length > 0) {
+                         console.log(d.data[0].Products[0].product_Id);
+                    }
+                    for (let i = 0; i < d.data.length; i++) {
+                         let a = d.data[i].Products[0];
+                         arr[i] = a;
+                    }
+               }
+               console.log(arr);
+               PIDF(arr);
+          }
+          catch (e) {
+               console.log(e);
+          }
+     }
 
      const getdata = () => {
           var options = {
@@ -131,8 +90,32 @@ const Payment = () => {
                currency: "INR",
                name: data.name,
                discription: "for testing purpose",
-               handler: function (response) {
-                    alert(response.razorpay_payment_id);
+               handler: async (response) => {
+
+                    let pid = response.razorpay_payment_id;
+                    let obj = {
+                         CID: cid,
+                         Product_ID: PID,
+                         Status: "Painding",
+                         payment_id: pid,
+                    }
+                    console.log(obj);
+                    const url = "http://127.0.0.1:3000/order";
+                    const r = await axios.post(url, obj);
+                    try {
+                         const d = await r;
+                         console.log(d.data.mess);
+                         if (d.status === 200) {
+                              alert(d.data.mess);
+                         }
+                         else {
+                              console.log("something want to wrong in api");
+                         }
+                    } catch (error) {
+                         console.log("somthing wrong is payment module")
+                    }
+
+
                },
                profile: {
                     name: data.name,
@@ -151,13 +134,13 @@ const Payment = () => {
      }
 
      const submit = (e) => {
-
           getdata();
           e.preventDefault();
      }
 
      useEffect(() => {
           g();
+          pid();
      }, []);
 
      return (<>

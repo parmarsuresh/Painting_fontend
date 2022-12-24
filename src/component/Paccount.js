@@ -49,7 +49,6 @@ const Paccount = () => {
      }
 
      const deletf = async (id) => {
-
           console.log(id);
           const url = `http://127.0.0.1:3000/delimg/${id}`;
           const r = await axios.get(url);
@@ -63,7 +62,6 @@ const Paccount = () => {
           catch (e) {
                console.log(e);
           }
-
 
      }
 
@@ -102,13 +100,11 @@ const Paccount = () => {
                     <button onClick={logout} className="up">Logout</button>
                     <NavLink to="/Uprofile" style={{ textDecoration: 'none' }} className="up">Update Profile</NavLink>
                     <NavLink to="/Addp" style={{ textDecoration: 'none' }} className="up">Add Painting</NavLink>
+                    <NavLink to="/show" style={{ textDecoration: 'none' }} className="up">Check order</NavLink>
+                    <NavLink to="/showAO" style={{ textDecoration: 'none' }} className="up">Accept order</NavLink>
                </div>
-
-
-
-
                {
-                    !path ? <p>hello</p> : <Showd data={path} />
+                    !path ? null : <Showd data={path} />
                }
                <div>
                     {
